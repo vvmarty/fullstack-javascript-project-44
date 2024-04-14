@@ -1,14 +1,7 @@
 import game from "../index.js";
+import { getRandomIntInclusive } from "../brain-functions.js";
 
 const descriptionGame = "What number is missing in the progression?";
-
-// Получает случайное целое число в заданном интервале, включительно
-const getRandomIntInclusive = (min, max) => {
-  const minValue = Math.ceil(min);
-  const maxValue = Math.floor(max);
-
-  return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
-};
 
 const getProgressionNumbers = () => {
   const result = [];

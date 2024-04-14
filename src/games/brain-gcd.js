@@ -1,4 +1,5 @@
 import game from "../index.js";
+import { getRandomIntInclusive } from "../brain-functions.js";
 
 const descriptionGame = "Find the greatest common divisor of given numbers.";
 
@@ -8,14 +9,6 @@ const getGcd = (a, b) => {
   }
 
   return getGcd(b, a % b);
-};
-
-// Получает случайное целое число в заданном интервале, включительно
-const getRandomIntInclusive = (min, max) => {
-  const minValue = Math.ceil(min);
-  const maxValue = Math.floor(max);
-
-  return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
 };
 
 const getQuestion = (number1, number2) => `${number1} ${number2}`;

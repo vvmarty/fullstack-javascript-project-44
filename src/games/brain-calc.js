@@ -1,4 +1,5 @@
 import game from "../index.js";
+import { getRandomIntInclusive } from "../brain-functions.js";
 
 const descriptionGame = "What is the result of the expression?";
 
@@ -15,14 +16,6 @@ const calculateExpression = (number1, number2, operation) => {
     default:
       return 0;
   }
-};
-
-// Получает случайное целое число в заданном интервале, включительно
-const getRandomIntInclusive = (min, max) => {
-  const minValue = Math.ceil(min);
-  const maxValue = Math.floor(max);
-
-  return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
 };
 
 const getRandomOperation = () => {
