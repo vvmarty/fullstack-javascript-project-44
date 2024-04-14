@@ -1,17 +1,17 @@
-import game from "../index.js";
-import { getRandomIntInclusive } from "../brain-functions.js";
+import game from '../index.js';
+import getRandomIntInclusive from '../brain-functions.js';
 
-const descriptionGame = "What is the result of the expression?";
+const descriptionGame = 'What is the result of the expression?';
 
 const getExpression = (number1, number2, operation) => `${number1} ${operation} ${number2}`;
 
 const calculateExpression = (number1, number2, operation) => {
   switch (operation) {
-    case "+":
+    case '+':
       return number1 + number2;
-    case "-":
+    case '-':
       return number1 - number2;
-    case "*":
+    case '*':
       return number1 * number2;
     default:
       return 0;
@@ -19,7 +19,7 @@ const calculateExpression = (number1, number2, operation) => {
 };
 
 const getRandomOperation = () => {
-  const operations = ["+", "-", "*"];
+  const operations = ['+', '-', '*'];
 
   return operations[getRandomIntInclusive(0, 2)];
 };

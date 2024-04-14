@@ -6,4 +6,4 @@ const getRandomIntInclusive = (min, max) => {
   return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
 };
 
-export { getRandomIntInclusive };
+export default getRandomIntInclusive;

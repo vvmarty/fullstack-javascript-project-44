@@ -1,7 +1,7 @@
-import game from "../index.js";
-import { getRandomIntInclusive } from "../brain-functions.js";
+import game from '../index.js';
+import getRandomIntInclusive from '../brain-functions.js';
 
-const descriptionGame = "What number is missing in the progression?";
+const descriptionGame = 'What number is missing in the progression?';
 
 const getProgressionNumbers = () => {
   const result = [];
@@ -23,9 +23,9 @@ const getProgressionNumbers = () => {
 const getQuestion = (progressionNumbers, indexEmptyNumber) => {
   const progressionNumbersCopy = progressionNumbers.slice();
 
-  progressionNumbersCopy[indexEmptyNumber] = "..";
+  progressionNumbersCopy[indexEmptyNumber] = '..';
 
-  const result = progressionNumbersCopy.join(" ");
+  const result = progressionNumbersCopy.join(' ');
 
   return result;
 };

@@ -1,5 +1,5 @@
-import game from "../index.js";
-import { getRandomIntInclusive } from "../brain-functions.js";
+import game from '../index.js';
+import getRandomIntInclusive from '../brain-functions.js';
 
 const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -17,7 +17,7 @@ const getQuestionAndAnswer = () => {
   const number = getRandomIntInclusive(1, 100);
 
   const question = number;
-  const answerCorrect = isPrimeNumber(number) ? "yes" : "no";
+  const answerCorrect = isPrimeNumber(number) ? 'yes' : 'no';
 
   return [question, String(answerCorrect)];
 };

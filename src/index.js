@@ -1,13 +1,13 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const countRound = 3;
 
 const game = (descriptionGame, getQuestionAndAnswer) => {
   let isError = false;
 
-  console.log("Welcome to the Brain Games!");
+  console.log('Welcome to the Brain Games!');
 
-  const userName = readlineSync.question("May I have your name? ");
+  const userName = readlineSync.question('May I have your name? ');
 
   console.log(`Hello, ${userName}!`);
 
@@ -18,10 +18,10 @@ const game = (descriptionGame, getQuestionAndAnswer) => {
 
     console.log(`Question: ${question}`);
 
-    const answerUser = readlineSync.question(`Your answer: `);
+    const answerUser = readlineSync.question('Your answer: ');
 
     if (answerUser === answerCorrect) {
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(`${answerUser} is wrong answer ;(. Correct answer was ${answerCorrect}.`);
       console.log(`Let's try again, ${userName}!`);

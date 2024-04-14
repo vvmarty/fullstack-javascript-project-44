@@ -1,7 +1,7 @@
-import game from "../index.js";
-import { getRandomIntInclusive } from "../brain-functions.js";
+import game from '../index.js';
+import getRandomIntInclusive from '../brain-functions.js';
 
-const descriptionGame = "Find the greatest common divisor of given numbers.";
+const descriptionGame = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
   if (b === 0) {
