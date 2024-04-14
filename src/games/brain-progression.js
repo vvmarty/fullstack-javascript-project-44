@@ -21,15 +21,11 @@ const getProgressionNumbers = () => {
 };
 
 const getQuestion = (progressionNumbers, indexEmptyNumber) => {
-  let result = "";
+  const progressionNumbersCopy = progressionNumbers.slice();
 
-  for (let i = 0; i < progressionNumbers.length; i += 1) {
-    if (i === indexEmptyNumber) {
-      result += " ..";
-    } else {
-      result += ` ${progressionNumbers[i]}`;
-    }
-  }
+  progressionNumbersCopy[indexEmptyNumber] = "..";
+
+  const result = progressionNumbersCopy.join(" ");
 
   return result;
 };
